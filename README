@@ -1,0 +1,17 @@
+Detekce aplikací generující síťový tok
+
+Autor: Petr Nodžák, xnodza00@stud.fit.vutbr.cz
+Datum: 16.10.2016
+
+Popis: Program pravidelně kontroluje seznam aplikací, které generují síťový tok. V tomto seznamě bude program vyhledávat spojení, které generuje některá aplikace definovaná parametrem. Po přefiltrování seznamu se na definovaný syslog server odešle + na stdout vypíše TCP/UDP patice a název aplikace.
+
+Příklad spuštění:
+	./appdetector [ -s IPadresa ] [ -i interval ] [ -f filter ]
+	./appdetector -s 192.168.0.1 -i 10 -f firefox,vlc #program bude každých 10 sekund kontrolovat seznam aplikací(firefox, vlc) a vypisovat + odesílat logy na syslog server 192.168.0.1
+
+Odevzdané soubory:
+	README
+	Makefile
+	appdetector.cpp
+	manual.pdf
+	
